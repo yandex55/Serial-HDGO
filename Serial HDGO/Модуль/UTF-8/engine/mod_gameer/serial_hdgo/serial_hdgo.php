@@ -51,7 +51,6 @@ if($serial_cat)
 }
 elseif($anime_cat)
 {
-	return;
 	if($xf_hdgo[$serial_hdgo["world_art"]])
 	{
 		$api_send = "world_art_id";
