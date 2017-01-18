@@ -1,0 +1,77 @@
+0. Перед установкой сделайте бекап базы данных.
+1. Залить все файлы себе на сервер, предварительно изменив название папки {THEME} на название своего шаблона.
+2. Запустить install.php после выполнения удалить файл.
+3. В fullsoty.tpl вставить в любом месте {include file="engine/mod_gameer/serial_hdgo/serial_hdgo.php?news_id={news-id}"}
+4. В main.tpl в нужном месте вставить {include file="engine/mod_gameer/serial_hdgo/serial_hdgo_block.php"}
+5. Открыть css файл и вставить
+.film-list-block {
+	margin: 0 0 20px;
+}
+.film-list-block-title {
+	height: 20px;
+}
+.ff1, .ff2 {
+	float: left;
+	height: 20px;
+}
+.ff1 {
+	background: #8bb940;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 22px;
+	padding: 0 15px 0 5px;
+}
+.ff3 {
+	background: #8bb940;
+	float: left;
+}
+.film-list-block-content {
+	clear: both;
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	border-top: 2px solid #8bb940;
+	padding: 5px;
+}
+.film-list-item, .film-list-item-link {
+	white-space: nowrap;
+}
+.film-list-item {
+	background: url(../serial_hdgo/film-list-item.jpg) 0 12px repeat-x;
+	position: relative;
+	font-size: 12px;
+	height: 20px;
+	overflow: hidden;
+	padding: 0;
+}
+.film-list-item-link {
+	background: #fff url(../serial_hdgo/film-list-item-link.jpg) left -11px no-repeat;
+	color: #000;
+	text-decoration: none;
+	font-weight: 700;
+	padding: 0 0 0 10px;
+}
+.film-list-item span {
+	display: block;
+	position: absolute;
+	right: 0;
+	background: #fff;
+	top: 2px;
+	color: gray;
+	font-size: 11px;
+	z-index: 2;
+	padding: 0 0 0 2px;
+}
+.film-list-item-link2 {
+	background:#fff url(../serial_hdgo/film-list-item-link.jpg) left 6px no-repeat!important;
+	color:#be0750;
+}
+.title_date_list {
+	background: #7BA635 url(../serial_hdgo/main-news.png) no-repeat right 2px bottom;
+	color: #fff;
+	padding: 10px 15px;
+	font: 300 18px 'Roboto', sans-serif;
+}
+6. Выставит права 777 на папку /engine/cache/moonwalk
+7. Загрузить serial_hdgo_cron.php в корень сайта.
+8. Зайти в админ панель, настроить модуль.
