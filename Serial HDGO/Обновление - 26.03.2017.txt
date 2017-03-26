@@ -1,0 +1,22 @@
+1. Заменить файлы engine/mod_gameer/serial_hdgo
+2. Удалить engine/cache/hdgo
+3. Заменить файл в engine/inc
+4. Заменить файлы в templates/ваш шаблон/serial_hdgo
+5. В fullsoty.tpl вставить в любом месте <div id="ajaxPlayerm"></div>
+6. Открыть /engine/modules/main.php (если нет файла то /index.php в корне сайта) найти:
+if ( $dle_module == "showfull" AND $news_found ) {
+Ниже вставить:
+$tpl->set ( '{newsid}', intval($_GET["newsid"]) );
+
+8. Перед тегом </body> вставить
+[aviable=showfull]<script type="text/javascript">
+	$(document).ready(function(){
+		$.post(dle_root+"engine/mod_gameer/serial_hdgo/serial_hdgo_ajax.php", {news_id:{newsid}, player:"yes"}, function(data){
+			if(data){
+				$("#ajaxPlayerm").html(data);
+				$('#simple-episodes-list').scrollLeft($('.b-simple_episode__item.active').position().left);
+			}
+		});
+	});
+</script>
+<script type="text/javascript" src="{THEME}/serial_hdgo/player.js"></script>[/aviable]

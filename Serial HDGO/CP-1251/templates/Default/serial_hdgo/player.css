@@ -1,0 +1,98 @@
+#player-loader-overlay {
+    background-color: #000;
+    background-image: url(../images/loader.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: none;
+    height: 460px;
+    position: absolute;
+    width: 100%;
+}
+.b-translators__block {
+	background-color: #151515;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	text-align: left !important;
+}
+.b-translators__list {
+	overflow: hidden;
+	padding-top: 2px;
+	padding-left: 0px;
+}
+.b-translator__item {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #2d2d2d;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font-size: 14px;
+	margin-left: 3px;
+	margin-top: 3px;
+	overflow: hidden;
+	padding: 5px 10px 5px 10px;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: auto;
+}
+.b-translator__item.active {
+	background: #5d5d5d !important;
+	cursor: default;
+}
+
+
+.b-simple_episodes__list {
+	margin: 0 auto;
+	padding: 10px 13px 12px 13px;
+	text-align: left;
+}
+.b-simple_episode__item {
+	background: #2d2d2d;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	margin: 0 2px 2px 0;
+	min-width: 12%;
+	padding: 5px 7px;
+	text-align: left;
+}
+.b-simple_episode__item.active {
+	background: #5d5d5d !important;
+	cursor: default;
+}
+
+#player {
+	background: #000;
+	min-height: 460px;
+}
+.b-player {
+	background: #000;
+	padding-top: 10px;
+	position: relative;
+}
+.b-simple_seasons__list {
+	margin: 0 auto;
+	padding: 10px;
+	padding: 4px 10px 12px 13px;
+	list-style: none;
+}
+.b-simple_season__item.active {
+	background: #5d5d5d !important;
+	cursor: default;
+}
+.b-simple_season__item {
+	background: #2d2d2d;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font-size: 13px;
+	margin: 0 2px 2px 0 !important;
+	min-width: 11.8%;
+	padding: 5px 7px;
+	text-align: left;
+	list-style: none !important;
+}
